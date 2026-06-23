@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="name">
+            <span><i class="fa-solid fa-user"></i></span>
+            <input type="text" id="name-input" class="name-input" value="anonymous" maxlength="20"/>
+        </div>
+
+        <div class="message-div">
+            <ul class="message-container" id="message-container">
+                <li class="message-left">
+                    <p class="message">
+                        Hello World!
+                        <span>Person 1 | 26 July 10:40</span>
+                    </p>
+                    
+                </li>
+
+                <li class="message-right">
+                    <p class="message">
+                        Hello World!
+                        <span>Person 2 | 26 July 10:42</span>
+                    </p>
+                    
+                </li>
+
+                <li class="message-feedback">
+                    <p class="feedback" id="feedback">
+                        Person is typing...
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <form id="message-form" class="message-form">
+            <input type="text" name="message" id="message-input" class="message-input"/>
+            <div class="v-divider"></div>
+            <button type="submit" class="send-btn">Send <span><i class="fa-solid fa-paper-plane"></i></span></button>
+        </form>
+    </div>
+
+    <h3 class="clients-total" id="clients-total">Total Clients: 2</h3>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.21/dayjs.min.js" integrity="sha512-7BnHO0aSsTKlbnXz+vFHMpPBHu2+ObLXRYEFwlf78OxmDxnicV505aojIreJMgZ709oDafpTHkm03/ySCjI3/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.21/plugin/relativeTime.min.js" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
